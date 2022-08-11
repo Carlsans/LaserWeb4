@@ -49,7 +49,7 @@ export function getGcode(settings, documents, operations, documentCacheHolder, s
     let starttime=new Date().getTime()
 
     const QE = new queue();
-    QE.timeout = 3600 * 1000;
+    QE.timeout = 3600 * 20000;
     QE.concurrency = settings.gcodeConcurrency || 1;
 
     const gcode = Array(operations.length);
